@@ -5,121 +5,273 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prachi Trivedi | Business Analyst Portfolio</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f8f8f8;
+      background-color: #f9f9f9;
       color: #333;
     }
+
     header {
       background-color: #1e3a8a;
-      color: white;
-      padding: 2rem;
+      color: #fff;
+      padding: 1.5rem;
       text-align: center;
     }
-    .section {
-      max-width: 900px;
-      margin: 2rem auto;
-      background-color: white;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
     }
-    h2 {
-      color: #1e3a8a;
-    }
-    .project {
-      margin-bottom: 2rem;
-    }
-    .project h3 {
-      margin-top: 0;
-    }
-    .project p {
+
+    header p {
       margin: 0.5rem 0;
     }
-    .bio {
-      margin-bottom: 2rem;
+
+    header a {
+      color: #cce3ff;
+      font-size: 0.95rem;
+      text-decoration: none;
     }
+
+    .section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    }
+
+    h2 {
+      color: #1e3a8a;
+      margin-bottom: 1rem;
+    }
+
+.bio {
+  /*display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;*/
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.bio-wrapper {
+  /*display: flex;
+  justify-content: center;*/
+  max-width: 1000px;
+  margin: 2rem auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.bio img {
+  width: 220px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+    .bio-content {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .bio-content p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
     .links {
       margin-top: 1rem;
     }
+
     .links a {
       color: #1e3a8a;
       text-decoration: none;
       margin-right: 1rem;
     }
+
+    .project {
+      /*margin-bottom: 2.5rem;*/
+      border: 1px solid #e0e0e0;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  background-color: #fafbff;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.3s ease;
+    }
+    .project:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+    .project h3 {
+      color: #111;
+      margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  position: relative;
+    }
+
+    .project h3::before {
+  content: "🛠️";
+  position: absolute;
+  left: -2rem;
+}
+
+.project p {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.project strong {
+  color: #374151;
+}
+
+.project ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.project ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.project a {
+  color: #1e40af;
+  text-decoration: underline;
+}
+
+    ul {
+      padding-left: 1.2rem;
+      line-height: 1.6;
+    }
+
     footer {
       text-align: center;
-      padding: 1rem;
+      padding: 1.2rem;
       background-color: #e5e5e5;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+        .bio {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.bio-content {
+  text-align: left;
+}
+
+      header h1 {
+        font-size: 1.6rem;
+      }
+
+      .section {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Prachi Trivedi</h1>
     <p>Business Analyst | Customer Success Enthusiast | Process Optimizer</p>
+    <p>Email ID: <a href="mailto:prachiptrivedi096@gmail.com">prachiptrivedi096@gmail.com</a></p>
   </header>
 
-  <div class="section bio">
-    <h2>About Me</h2>
-    <p>I'm a Business Analyst with over 5 years of experience bridging the gap between business needs and technology solutions. With a background in both IT and customer-facing roles, I specialize in streamlining processes, enhancing customer experiences, and delivering data-driven results. I’m currently based in Ontario, Canada, and am passionate about creating meaningful impact through business insight and digital solutions.</p>
-    <div class="links">
-      <a href="mailto:prachiPtrivedi096@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/prachi-trivedi" target="_blank">LinkedIn</a>
-      <a href="resume.pdf" target="_blank">Download Resume (PDF)</a>
+  <!-- About Me Section -->
+  <div class="section bio-wrapper">
+    <div class="bio">
+      <img src="Prachi Image.jpg" alt="Prachi Trivedi photo" />
+      <div class="bio-content">
+        <h2>About Me</h2>
+      <p>I’m a Business Analyst with over 5.5 years of experience in customer-facing and operations roles, where I’ve learned how to turn real-world problems into practical, data-backed solutions. My work blends a sharp understanding of user behavior, process improvement, and team collaboration to help businesses run smarter.</p>
+      <p>I’m hands-on with tools like JIRA, Confluence, SQL, Excel, Tableau, Figma, and Salesforce CRM, and I’m especially strong at gathering requirements, working with stakeholders, making sense of data, and keeping cross-functional projects on track.</p>
+      <p>What really drives me is spotting potential issues before they slow things down and helping teams work more efficiently. I bring clarity, empathy, and results to the table—and I genuinely enjoy bridging the gap between business needs and technical solutions.</p>
+      <p style="font-weight: bold;">📌 Think of me as the connector between goals and outcomes—quietly dependable, always effective.</p>
+
+      <div class="links">
+        <a href="https://www.linkedin.com/in/prachitrivedi096/" target="_blank">LinkedIn</a>
+        <a href="resume.pdf" target="_blank">Download Resume</a>
+      </div>
     </div>
   </div>
+  </div>
 
+  <!-- Projects Section -->
   <div class="section">
     <h2>Portfolio Projects</h2>
 
+    <!-- Project 1 -->
     <div class="project">
       <h3>LudoFantasy Mobile App – Real Money Gaming Platform</h3>
-      <p><strong>Project Overview:</strong> LudoFantasy (http://ludofantasy.com) is a real-money mobile game based on classic Ludo, where users compete in multiplayer contests for monetary rewards.</p>
-      <p><strong>My Role:</strong> Business Analyst</p>
-      <p><strong>Responsibilities:</strong></p>
+      <p><strong>Project Overview:</strong> 
+        <a href="http://ludofantasy.com" target="_blank">LudoFantasy</a> is a real-money multiplayer mobile game inspired by classic Ludo. Players can join paid contests, compete live with others, and win cash prizes through various payment options. Features include real-time chat, player matchmaking, practice mode, and referral bonuses.
+      </p>
+      <p><strong>My Role:</strong> Business Analyst and Project Coordinator</p>
+      <p><strong>Responsibilities & Impact:</strong></p>
       <ul>
-        <li>Conducted market analysis and competitor benchmarking for real-money gaming trends in India.</li>
-        <li>Gathered and documented user requirements, working with stakeholders including marketing, dev, and compliance teams.</li>
-        <li>Created wireframes and collaborated with the UI/UX team to enhance onboarding and reduce drop-offs by 17%.</li>
-        <li>Implemented event tracking and analyzed gameplay data to improve user retention by 22%.</li>
+        <li>Led market research and competitor benchmarking to identify monetization and engagement trends in India’s real-money gaming space.</li>
+        <li>Gathered business and user requirements through cross-functional coordination with marketing, development, and compliance teams.</li>
+        <li>Collaborated with UI/UX team to enhance onboarding, reducing user drop-offs by 17%.</li>
+        <li>Set up event tracking via Google Analytics and improved user retention by 22%.</li>
+        <li>Contributed to feature development: new Ludo themes, referral code logic, new game mode (Snake & Ladder), and improved room-matching logic.</li>
       </ul>
       <p><strong>Tools:</strong> JIRA, Google Analytics, Excel, Figma</p>
+      <p><strong>Tech Stack:</strong> Unity (Frontend), Node.js, MongoDB, AWS (Backend)</p>
+      <p><strong>APIs & Integrations:</strong> Razorpay, Firebase, REST APIs, Socket.IO</p>
+      <p><strong>Payment Gateways:</strong> Google Pay, Credit/Debit Cards, Net Banking</p>
     </div>
 
+    <!-- Project 2 -->
     <div class="project">
       <h3>Salesforce CRM Implementation for Sales Team</h3>
-      <p><strong>Project Overview:</strong> Led the CRM transformation project to streamline the sales lifecycle using Salesforce for a mid-size B2B sales team of 50+ members.</p>
+      <p><strong>Project Overview:</strong> Spearheaded a CRM overhaul using Salesforce to streamline the sales lifecycle for a B2B sales team of 20+ members.</p>
       <p><strong>My Role:</strong> Business Analyst & CRM Consultant</p>
-      <p><strong>Responsibilities:</strong></p>
       <ul>
-        <li>Gathered user stories and requirements from cross-functional sales and marketing teams.</li>
-        <li>Worked with Salesforce developers to customize lead and opportunity objects, validation rules, and automation workflows.</li>
-        <li>Created comprehensive training guides and led workshops, increasing CRM adoption from 40% to 87% in 3 months.</li>
-        <li>Delivered ROI analysis that demonstrated a 25% increase in sales closure efficiency within 6 months.</li>
+        <li>Collected user stories from sales and marketing stakeholders via interviews and workshops.</li>
+        <li>Coordinated between leadership and team managers to align on project goals.</li>
+        <li>Created detailed requirement documentation including workflows and use cases.</li>
+        <li>Worked with Salesforce consultants to customize objects, validation rules, and automation flows.</li>
+        <li>Developed training content and conducted onboarding sessions, boosting adoption from 40% to 87% in 3 months.</li>
+        <li>Performed ROI analysis showing a 25% lift in deal closure efficiency post-implementation.</li>
       </ul>
       <p><strong>Tools:</strong> Salesforce, MS Visio, Lucidchart, Confluence</p>
     </div>
 
+    <!-- Project 3 -->
     <div class="project">
-      <h3>Customer Churn Prediction using Machine Learning</h3>
-      <p><strong>Project Overview:</strong> Built a predictive model to identify churn risk customers for a SaaS subscription-based company, enabling proactive retention efforts.</p>
-      <p><strong>My Role:</strong> Business Analyst (with Data Analyst collaboration)</p>
-      <p><strong>Responsibilities:</strong></p>
+      <h3>Inventory Optimization & Forecasting for Retail Chain</h3>
+      <p><strong>Project Overview:</strong> Designed a data-backed inventory management solution for a multi-store retail chain to reduce stockouts, overstock, and holding costs.</p>
+      <p><strong>My Role:</strong> Business Analyst</p>
       <ul>
-        <li>Collaborated with the data science team to define business objectives and key features contributing to churn.</li>
-        <li>Cleaned and structured historical usage and support ticket data for modeling.</li>
-        <li>Designed dashboards to visualize churn probability by segment, helping Customer Success prioritize accounts.</li>
-        <li>Initiated automated email campaign triggers based on churn score, reducing churn rate by 18% in 2 quarters.</li>
+        <li>Gathered requirements from supply chain leads and store managers to understand inventory challenges.</li>
+        <li>Analyzed 12 months of transactional data to uncover seasonal trends and demand patterns.</li>
+        <li>Worked with data analysts to implement ARIMA and Holt-Winters forecasting models for key SKUs.</li>
+        <li>Built Tableau dashboards for visualizing reorder points, safety stock, and forecast accuracy.</li>
+        <li>Proposed an ABC inventory classification strategy to focus resources on top-performing items.</li>
+        <li>Documented end-to-end process flows and presented a final business case to stakeholders.</li>
       </ul>
-      <p><strong>Tools:</strong> Python (Scikit-learn), Tableau, SQL, Excel</p>
+      <p><strong>Tools:</strong> Tableau, SQL, Excel, Python (Pandas, statsmodels), MS Visio</p>
     </div>
   </div>
 
   <footer>
-    <p>© 2025 Prachi Trivedi | Contact: prachiPtrivedi096@gmail.com</p>
+    <p>© 2025 Prachi Trivedi | Contact: <a href="mailto:prachiptrivedi096@gmail.com">prachiptrivedi096@gmail.com</a></p>
   </footer>
 </body>
 </html>
